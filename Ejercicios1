@@ -1,0 +1,70 @@
+° Escribe la ruta absoluta para referirte a todos los archivos que inician con "a" 
+y terminan con ".log" en el directorio "/var/log/"
+
+	1) ls -la /var/log/a*.log
+
+° Escribe una ruta relativa para referirte a los mismos archivos desde los directorios /, 
+/usr/share, /facultad/calculo/ayudantia/ y /usr/local/bin
+
+	1) cd /
+	2) cd ./var/log/
+	3) ls -la a*.log
+	4) cd /usr/share/
+	5) cd ../../var/log/
+	6) ls -la a*.log
+	7) cd ~
+	8) cd Facultad/Calculo/Ayudantia
+	9) cd ../../../../../var/log/
+	10) ls -la a*.log
+	11) cd /usr/local/bin
+	12) cd ../../../var/log/
+	13) ls -la a*.log
+
+° Crea un directorio llamado miPractica que contenga dos subdirectorios llamados usuarios 
+y archivo y que esten en el directorio base.
+
+	1) cd ~
+	2) mkdir miPractica
+	3) cd miPractica
+	4) mkdir usuarios
+	5) mkdir archivo
+
+° Crea un archivo llamado raizArchivo.dat en el subdirectorio archivos del directorio miPractica
+que contenga el listado de los archivos y directorios del directorio. Redirecciona la salida de ls.
+
+	1) cd archivo
+	2) touch raizArchivo.dat
+	3) cd ..
+	4) ls > raizArchivo.dat
+
+° A todos los directorios que haz creado asignales permisos de lectura y escritura para ti y solo lectura para los demás.
+
+	1) chmod 644 archivo
+	2) chmod 644 usuarios
+	3) cd ..
+	4) chmod 644 miPractica
+
+° A todos los directorios que haz creado asignales permisos de lectura y escritura para ti y ningun permiso para los demás.
+
+	1) chmod 744 miPractica
+	2) cd miPractica
+	3) chmod 600 archivo
+	4) chmod 600 usuarios
+
+° Crea una copia del directorio miPractica y todo su contenido llamale ejercicios.
+
+	1) cd ..
+	2) cp -r miPractica/ Documentos
+	3) cd Documentos
+	4) mv miPractica Ejercicios
+
+° Elimina el directorio miPractica y todo su contenido.
+
+	1) cd ~
+	2) cd miPractica/archivo
+	3) rm raizArchivo.dat
+	4) cd ..
+	5) rmdir archivo
+	6) rmdir usuarios
+	7) cd ..
+	8) rmdir miPractica
