@@ -1,0 +1,18 @@
+mkdir Taller
+cd Taller
+git init
+touch README
+git add README
+git remote add origin https://github.com/SabrinaGalvanS/TallerHerramientas.git
+cd ..
+mv Ejercicios1.txt Taller/Ejercicios1
+cd Taller
+git add Ejercicios1
+git commit Ejercicios1
+git add Ejercicios1
+git show
+git add Ejercicios2
+git commit Ejercicios2
+git add Ejercicios2
+git show
+git push -u origin master
